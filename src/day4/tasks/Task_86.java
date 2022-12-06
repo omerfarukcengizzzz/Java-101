@@ -1,9 +1,16 @@
 package day4.tasks;
 
+import java.util.Scanner;
+
 public class Task_86 {
     public static void main(String[] args) {
 
-        System.out.println(months(213));
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Enter a month number to see which one it is: ");
+        int num = sc.nextInt();
+
+        System.out.println("Month name is " + months(num));
 
     }
 
@@ -11,7 +18,10 @@ public class Task_86 {
     public static String months(int i) {
 
         if (i <= 0 || i >= 13) {
+
             System.out.println("invalid number, range should be between 1-12");
+            return null;
+
         } else {
             String monthsList[] = {
                     "January",
@@ -31,6 +41,5 @@ public class Task_86 {
             return monthsList[i - 1];
         }
 
-        return null;
     }
 }

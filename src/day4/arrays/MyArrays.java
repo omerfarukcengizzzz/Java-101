@@ -27,11 +27,29 @@ public class MyArrays {
         temp[5] = 6;
 
         // for loop
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < temp.length; i++) {
             System.out.println("temp[" + i + "] = " + temp[i]);
         }
 
+        for (int i = numbers.length - 1; i >= 0; i--) {
+            System.out.println(numbers[i]);
+        }
 
+
+
+        // foreach loop
+
+        //  for (int i = 0; i < nameList.length; i++) {
+        //      System.out.println(nameList[i]);
+        //  }
+
+        for (String list : nameList) {
+            System.out.println(list);
+        }
+
+        for (int nums : numbers) {
+            System.out.println(nums);
+        }
 
     }
 }
